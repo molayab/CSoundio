@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Csoundio",
+    name: "CSoundio",
     pkgConfig: "libsoundio",
     providers: [
         .brew(["libsoundio"]),
