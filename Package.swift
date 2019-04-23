@@ -5,9 +5,17 @@ import PackageDescription
 
 let package = Package(
     name: "CSoundio",
-    pkgConfig: "libsoundio",
-    providers: [
-        .brew(["libsoundio"]),
-        .apt(["libsoundio-dev"])
-    ]
+    products: [
+        .library(name: "CSoundio", targets: ["CSoundio"])
+    ],
+    targets: [
+        .systemLibrary(
+            name: "CSoundio",
+            pkgConfig: "libsoundio",
+            providers: [
+                .brew(["libsoundio"]),
+                .apt(["libsoundio-dev"])
+            ]
+        )
+    ] 
 )
