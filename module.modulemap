@@ -1,12 +1,12 @@
 module CsoundioMac [system] {
-  header "/usr/local/include/soundio.h"
+  header "/usr/local/include/soundio/soundio.h"
   link "soundio"
 
   export *
 }
 
 module CsoundioLinux [system] {
-  header "/usr/include/soundio.h"
+  header "/usr/include/soundio/soundio.h"
   link "soundio"
 
   export *
