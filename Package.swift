@@ -11,10 +11,10 @@ let package = Package(
     targets: [
         .systemLibrary(
             name: "CSoundio",
-            pkgConfig: "libsoundio",
+            pkgConfig: "libsoundio libavcodec libavformat",
             providers: [
-                .brew(["libsoundio"]),
-                .apt(["libsoundio-dev"])
+                .brew(["libsoundio", "ffmpeg"]),
+                .apt(["libsoundio-dev", "ffmpeg"])
             ]
         )
     ] 

@@ -11,3 +11,33 @@ module CSoundioLinux [system] {
 
   export *
 }
+
+module CAVCodecMac [system] {
+  header "/usr/local/include/libavcodec/avcodec.h"
+  link "avcodec"
+
+  export * 
+}
+
+module CAVCodecLinux [system] {
+  header "/usr/include/libavcodec/avcodec.h"
+  link "avcodec"
+
+  export * 
+}
+
+module CAVFormatMac [system] {
+  header "/usr/local/include/libavformat/avformat.h"
+  header "/usr/local/include/libavformat/avio.h"
+  link "avformat"
+
+  export *
+}
+
+module CAVFormatLinux [system] {
+  header "/usr/include/libavformat/avformat.h"
+  header "/usr/include/libavformat/avio.h"
+  link "avformat"
+
+  export *
+}
